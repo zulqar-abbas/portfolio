@@ -1,0 +1,144 @@
+{
+  "name": "Zulqarnain Abbas",
+  "title": "Fullstack Developer",
+  "location": "Lahore, Pakistan",
+  "email": "zulqarnainabbas001@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/zulqarabbas",
+  "github": "https://github.com/zulqar-abbas",
+  "summary": "Experienced Full-Stack Developer with a strong track record in designing and developing scalable software solutions. Proficient in modern single-page applications, secure back-ends, and cloud technologies. Committed to delivering high-quality code and exceeding project goals. Skilled in React, NodeJS, ExpressJS, AWS, and microservice architecture.",
+  "skills": [
+    "Typescript",
+    "JavaScript",
+    "Java",
+    "Python",
+    "MySQL",
+    "SQL",
+    "MongoDB",
+    "DynamoDB",
+    "ExpressJS",
+    "NodeJS",
+    "NextJS",
+    "Spring Boot",
+    "Angular",
+    "React",
+    "Jest",
+    "Mocha",
+    "AWS",
+    "OpenAI",
+    "Docker",
+    "Redis",
+    "Git",
+    "Postman",
+    "Jira"
+  ],
+  "experience": [
+    {
+      "position": "Fullstack Engineer",
+      "company": "Conrad Labs (Autolabs)",
+      "location": "Lahore, Pakistan",
+      "duration": "Feb 2022 \u2014 Present",
+      "responsibilities": [
+        "Enhanced existing microservices by implementing new features, further strengthening the application\u2019s functionality.",
+        "Built a platform notification module with AWS AppSync, improving user activity within the application.",
+        "Implemented global search feature with Amazon OpenSearch Service and AWS ECS, reindexing 13 million records per index, achieving 30% productivity boost with 30% faster search times.",
+        "Introduced a new Lambda function to send ROI reports to customers, resulting in a significant revenue increase.",
+        "Successfully implemented a Campaign Nurturing feature, boosting customer engagement by 15%.",
+        "Led a Proof of Concept (PoC) focused on integrating Generative AI into the application.",
+        "Actively involved in developing an assistant using OpenAI APIs to improve Amazon Lex\u2019s accuracy rate from 25% to 90%.",
+        "Conducted high-level code reviews to maintain code quality and consistency."
+      ],
+      "technologies": [
+        "TypeScript",
+        "React",
+        "NodeJS",
+        "AWS",
+        "PostgreSQL",
+        "OpenAI"
+      ]
+    },
+    {
+      "position": "Fullstack Engineer",
+      "company": "Conrad Labs (Marcus Technologies)",
+      "location": "Lahore, Pakistan",
+      "duration": "Date Not Specified",
+      "responsibilities": [
+        "Spearheaded the development of REST APIs using Java Spring Boot.",
+        "Innovated by introducing a global UIKit module, reducing front-end development time by 20%.",
+        "Automated email processes, resulting in a 15% reduction in user manual effort.",
+        "Transformed a legacy Angular application structure into a well-organized SPA project.",
+        "Conducted client demos and actively participated in requirements gathering.",
+        "Managed agile development using JIRA and led high-level code reviews."
+      ],
+      "technologies": [
+        "TypeScript",
+        "React",
+        "NodeJS",
+        "AWS",
+        "Spring Boot - Java 11",
+        "ElasticSearch",
+        "MySQL",
+        "Hibernate",
+        "Flyway",
+        "Angular 12"
+      ]
+    },
+    {
+      "position": "Software Engineer",
+      "company": "Dubizzel Labs (EMPG LABS)",
+      "location": "Lahore, Pakistan",
+      "duration": "Sep 2020 \u2014 Jan 2022",
+      "responsibilities": [
+        "Engineered REST APIs in NodeJS to provide data to a third-party mobile application for data visualization for a 100k+ user base.",
+        "Achieved a 25% reduction in deal cancellations by developing expiry calculation rules and leveraging AgendaJS.",
+        "Designed and implemented a SchedularService for scheduling business-defined rules.",
+        "Dramatically improved server response time by 50% through the revamping of a legacy feature.",
+        "Authored migrations for data updates and database schema changes using Sequelize ORM.",
+        "Actively participated in daily code reviews and maintained code quality."
+      ],
+      "technologies": [
+        "Angular",
+        "TypeScript",
+        "Redis",
+        "MongoDB",
+        "MySQL",
+        "ExpressJS",
+        "NodeJS",
+        "JavaScript",
+        "Sequelize"
+      ]
+    }
+  ],
+  "contact": {
+    "email": "zulqarnainabbas001@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/zulqarabbas",
+    "github": "https://github.com/zulqar-abbas"
+  },
+  "ai_llm_projects": [
+    {
+      "title": "LLM-Powered Dealership Advisor",
+      "tools": [
+        "Langchain",
+        "OpenAI API"
+      ],
+      "description": "Built an intelligent agent using Langchain and OpenAI APIs to serve as a dealership advisor, capable of responding to user queries and simulating sales consultation logic."
+    },
+    {
+      "title": "GenAI-Powered Natural Language to SQL Search",
+      "tools": [
+        "OpenAI Agent API",
+        "SQL",
+        "Langchain"
+      ],
+      "description": "Contributed to the development of a generative AI system that converts natural language into SQL queries using OpenAI Agent API, allowing non-technical users to search structured data easily."
+    },
+    {
+      "title": "Enhanced AWS Lex with GenAI",
+      "tools": [
+        "AWS Lex",
+        "OpenAI",
+        "LLMs"
+      ],
+      "description": "Improved AWS Lex's conversational accuracy and context retention by integrating Generative AI, boosting performance significantly for customer service workflows."
+    }
+  ]
+}
