@@ -89,7 +89,7 @@ export default function ContactForm() {
             <FaCheckCircle className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0" />
             <div>
               <h3 className="text-green-800 dark:text-green-200 font-semibold">Message Sent Successfully!</h3>
-              <p className="text-green-700 dark:text-green-300 text-sm">Thank you for reaching out. I'll get back to you soon!</p>
+              <p className="text-green-700 dark:text-green-300 text-sm">Thank you for reaching out. I&apos;ll get back to you soon!</p>
             </div>
           </div>
         </div>
