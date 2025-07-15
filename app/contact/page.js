@@ -1,6 +1,5 @@
 import { getProfileData } from '../../lib/data'
 import Navbar from '../../components/Navbar'
-import Footer from '../../components/Footer'
 import ContactForm from '../../components/ContactForm'
 import { 
   FaEnvelope, 
@@ -14,6 +13,15 @@ import {
   FaGlobe,
   FaPhone
 } from 'react-icons/fa'
+
+export const metadata = {
+  title: 'Contact',
+  description: 'Get in touch with Zulqarnain Abbas for collaboration opportunities, project inquiries, or just to say hello. Available for freelance and full-time positions.',
+  openGraph: {
+    title: 'Contact Zulqarnain Abbas',
+    description: 'Connect with me for collaboration opportunities, project inquiries, or professional networking.',
+  },
+}
 
 export default function Contact() {
   const profile = getProfileData()
@@ -232,7 +240,6 @@ export default function Contact() {
         </div>
       </section>
 
-      <Footer />
     </div>
   )
 } 

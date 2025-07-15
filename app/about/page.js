@@ -1,7 +1,6 @@
 import { getProfileData } from '../../lib/data'
 import { getTechIcon, getTechIconColor } from '../../lib/techIcons'
 import Navbar from '../../components/Navbar'
-import Footer from '../../components/Footer'
 import { 
   FaCode, 
   FaPalette, 
@@ -10,6 +9,15 @@ import {
   FaCloud, 
   FaTools 
 } from 'react-icons/fa'
+
+export const metadata = {
+  title: 'About',
+  description: 'Learn more about Zulqarnain Abbas - a passionate fullstack developer and AI engineer with expertise in modern web technologies and machine learning.',
+  openGraph: {
+    title: 'About Zulqarnain Abbas - Fullstack Developer & AI Engineer',
+    description: 'Learn more about my background, skills, and passion for technology and innovation.',
+  },
+}
 
 export default function About() {
   const profile = getProfileData()
@@ -284,7 +292,6 @@ export default function About() {
         </div>
       </section>
 
-      <Footer />
     </div>
   )
 } 

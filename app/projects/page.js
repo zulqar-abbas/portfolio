@@ -3,7 +3,6 @@
 import { getProfileData } from '../../lib/data'
 import { getTechIcon, getTechIconColor } from '../../lib/techIcons'
 import Navbar from '../../components/Navbar'
-import Footer from '../../components/Footer'
 import { 
   FaRocket, 
   FaBrain, 
@@ -17,7 +16,8 @@ import {
   FaCode,
   FaDownload,
   FaEnvelope,
-  FaLightbulb
+  FaLightbulb,
+  FaLaptop
 } from 'react-icons/fa'
 import { useState } from 'react'
 
@@ -312,7 +312,6 @@ export default function Projects() {
         </div>
       </section>
 
-      <Footer />
     </div>
   )
 } 

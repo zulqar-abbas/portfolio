@@ -1,7 +1,6 @@
 import { getProfileData } from '../../lib/data'
 import { getTechIcon, getTechIconColor } from '../../lib/techIcons'
 import Navbar from '../../components/Navbar'
-import Footer from '../../components/Footer'
 import { 
   FaBriefcase, 
   FaBuilding, 
@@ -15,6 +14,16 @@ import {
   FaUsers,
   FaCheckCircle
 } from 'react-icons/fa'
+import profileData from '@/profileData.json'
+
+export const metadata = {
+  title: 'Experience',
+  description: 'Explore my professional experience as a fullstack developer and AI engineer, including roles at Autolabs and other companies.',
+  openGraph: {
+    title: 'Experience - Zulqarnain Abbas',
+    description: 'My professional journey and work experience in software development and AI engineering.',
+  },
+}
 
 export default function Experience() {
   const profile = getProfileData()
@@ -237,7 +246,6 @@ export default function Experience() {
         </div>
       </section>
 
-      <Footer />
     </div>
   )
 } 

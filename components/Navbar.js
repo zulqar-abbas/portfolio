@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Logo from './Logo'
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -34,9 +35,14 @@ export default function Navbar() {
           {/* Logo */}
           <Link 
             href="/" 
-            className="text-xl font-bold gradient-text hover:scale-105 transition-transform duration-300 animate-fade-in-left"
+            className="hover:scale-105 transition-transform duration-300 animate-fade-in-left"
           >
-            Zulqarnain Abbas
+            <div className="hidden sm:block">
+              <Logo showText={true} />
+            </div>
+            <div className="sm:hidden">
+              <Logo iconOnly={true} />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

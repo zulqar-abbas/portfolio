@@ -25,6 +25,7 @@
     "Mocha",
     "AWS",
     "OpenAI",
+    "Langchain",
     "Docker",
     "Redis",
     "Git",

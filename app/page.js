@@ -1,7 +1,9 @@
 import { getProfileData } from '../lib/data'
 import { getTechIcon, getTechIconColor } from '../lib/techIcons'
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import TypewriterTitle from '../components/TypewriterTitle'
+import DynamicDescription from '../components/DynamicDescription'
+import AnimatedCounter from '../components/AnimatedCounter'
 import { 
   FaDownload, 
   FaEnvelope, 
@@ -13,8 +15,19 @@ import {
   FaArrowRight,
   FaCode,
   FaGlobe,
-  FaLightbulb
+  FaLightbulb,
+  FaTrophy,
+  FaUsers
 } from 'react-icons/fa'
+
+export const metadata = {
+  title: 'Home',
+  description: 'Welcome to my portfolio. I\'m a fullstack developer and AI engineer passionate about building innovative web applications and AI solutions.',
+  openGraph: {
+    title: 'Zulqarnain Abbas - Fullstack Developer & AI Engineer',
+    description: 'Welcome to my portfolio. I\'m a fullstack developer and AI engineer passionate about building innovative web applications and AI solutions.',
+  },
+}
 
 export default function Home() {
   const profile = getProfileData()
@@ -63,15 +76,13 @@ export default function Home() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               Hi, I&apos;m <span className="gradient-text">{profile.name}</span>
             </h1>
-            <h2 className="text-xl sm:text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 mb-8">
-              {profile.title}
+            <h2 className="text-gray-600 dark:text-gray-300 mb-8">
+              <TypewriterTitle />
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-              I&apos;m always interested in hearing about new opportunities and interesting projects. Let&apos;s create something amazing together!
-            </p>
+            <DynamicDescription profile={profile} />
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <a
                 href="/ZulqarnainAbbas_Resume.pdf"
                 download
@@ -87,6 +98,69 @@ export default function Home() {
                 <FaEnvelope className="w-5 h-5 mr-2" />
                 Get In Touch
               </a>
+            </div>
+
+            {/* Stats Bar */}
+            <div className="w-full max-w-4xl mx-auto">
+              <div className="bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6 md:p-8 shadow-lg">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                  <div className="text-center group">
+                    <div className="flex items-center justify-center mb-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300 shadow-md">
+                        <FaCode className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                        <AnimatedCounter target={6} suffix="+" />
+                      </div>
+                    </div>
+                    <div className="text-xs md:text-sm text-gray-600 dark:text-gray-400 font-medium">
+                      Years Experience
+                    </div>
+                  </div>
+                  
+                  <div className="text-center group">
+                    <div className="flex items-center justify-center mb-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300 shadow-md">
+                        <FaRocket className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
+                        <AnimatedCounter target={25} suffix="+" />
+                      </div>
+                    </div>
+                    <div className="text-xs md:text-sm text-gray-600 dark:text-gray-400 font-medium">
+                      Projects Completed
+                    </div>
+                  </div>
+                  
+                  <div className="text-center group">
+                    <div className="flex items-center justify-center mb-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300 shadow-md">
+                        <FaUsers className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-300">
+                        <AnimatedCounter target={3} suffix="" />
+                      </div>
+                    </div>
+                    <div className="text-xs md:text-sm text-gray-600 dark:text-gray-400 font-medium">
+                      Companies Worked
+                    </div>
+                  </div>
+                  
+                  <div className="text-center group">
+                    <div className="flex items-center justify-center mb-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300 shadow-md">
+                        <FaTrophy className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300">
+                        <AnimatedCounter target={23} suffix="+" />
+                      </div>
+                    </div>
+                    <div className="text-xs md:text-sm text-gray-600 dark:text-gray-400 font-medium">
+                      Skills Mastered
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -281,7 +355,6 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer />
-    </div>
+      </div>
   )
 }
