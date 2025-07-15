@@ -1,14 +1,14 @@
 "use client"
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 
 const TypewriterTitle = () => {
-  const titles = [
+  const titles = useMemo(() => [
     'Fullstack Engineer',
     'Software Engineer', 
     'AI Engineer',
     'Backend Engineer'
-  ]
+  ], [])
   
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0)
   const [currentText, setCurrentText] = useState('')

@@ -155,7 +155,7 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             className="input-modern"
-            placeholder="What's this about?"
+            placeholder="What&apos;s this about?"
             disabled={isSubmitting}
           />
         </div>
