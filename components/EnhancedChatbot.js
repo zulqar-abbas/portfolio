@@ -199,12 +199,12 @@ Try asking me:
     const relevantInfo = retrieveRelevantInfo(query)
     
     if (relevantInfo.length === 0) {
-      return `I don't have specific information about that. Here are some things you can ask me about:
+      return `I don\'t have specific information about that. Here are some things you can ask me about:
 
 • **Experience:** "Tell me about his work experience" or "What companies has he worked for?"
 • **Skills:** "What are his technical skills?" or "What technologies does he know?"
 • **AI Projects:** "Show me his AI projects" or "What LLM work has he done?"
-• **Contact:** "How can I contact him?" or "What's his email?"
+• **Contact:** "How can I contact him?" or "What\'s his email?"
 • **Background:** "Tell me about his background" or "Who is Zulqarnain?"`
     }
 
@@ -289,7 +289,7 @@ Try asking me:
             <div className="flex items-center gap-3">
               <FaRobot className="w-5 h-5" />
               <div>
-                <h3 className="font-semibold">Zulqarnain's AI Assistant</h3>
+                <h3 className="font-semibold">Zulqarnain\'s AI Assistant</h3>
                 <p className="text-xs opacity-90">Ask me anything about his experience</p>
               </div>
             </div>
@@ -363,7 +363,7 @@ Try asking me:
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyPress={handleKeyPress}
-                    placeholder="Ask me about Zulqarnain's experience..."
+                    placeholder="Ask me about Zulqarnain\'s experience..."
                     className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white text-sm"
                     disabled={isLoading}
                   />

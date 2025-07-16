@@ -100,15 +100,15 @@ const Chatbot = ({ profileData }) => {
     const relevantInfo = retrieveRelevantInfo(query)
     
     if (relevantInfo.length === 0) {
-      return "I don't have specific information about that. Could you ask me about Zulqarnain's experience, skills, projects, or contact information?"
+      return "I don\'t have specific information about that. Could you ask me about Zulqarnain\'s experience, skills, projects, or contact information?"
     }
 
     // Create a contextual response
-    let response = "Based on Zulqarnain's information:\n\n"
+    let response = "Based on Zulqarnain\'s information:\n\n"
     response += relevantInfo.join('\n\n')
     
     // Add a helpful follow-up
-    response += "\n\nIs there anything specific about this information you'd like me to elaborate on?"
+    response += "\n\nIs there anything specific about this information you\'d like me to elaborate on?"
     
     return response
   }
