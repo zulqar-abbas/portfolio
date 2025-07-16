@@ -176,7 +176,7 @@ const Chatbot = ({ profileData }) => {
             <div className="flex items-center gap-3">
               <FaRobot className="w-5 h-5" />
               <div>
-                <h3 className="font-semibold">Zulqarnain's AI Assistant</h3>
+                <h3 className="font-semibold">Zulqarnain&apos;s AI Assistant</h3>
                 <p className="text-xs opacity-90">Ask me anything about his experience</p>
               </div>
             </div>
