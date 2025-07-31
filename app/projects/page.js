@@ -28,14 +28,49 @@ export default function Projects() {
   // Sample projects based on experience
   const regularProjects = [
     {
+      title: "Autolabs - Automotive Management Platform",
+      description: "Led development of a comprehensive automotive dealership management system at Conrad Labs (Autolabs). Built microservices architecture, implemented global search with 13M+ records, real-time notifications, and AI-powered customer service with 90% accuracy improvement. Achieved 30% productivity boost and 15% customer engagement increase.",
+      technologies: ["TypeScript", "React", "NodeJS", "AWS", "PostgreSQL", "OpenAI", "AppSync", "OpenSearch"],
+      category: "Full-Stack",
+      icon: FaRocket,
+      gradient: "from-blue-600 to-indigo-600",
+      github: "https://github.com/zulqar-abbas",
+      link: "https://autolabs.io",
+      image: "/images/projects/autolabs.png",
+      isFlagship: true
+    },
+    {
+      title: "Marcus Technologies - Enterprise Platform",
+      description: "Spearheaded development of enterprise-grade applications at Conrad Labs (Marcus Technologies). Built REST APIs with Spring Boot, created reusable UIKit modules reducing development time by 20%, and transformed legacy Angular applications into modern SPAs. Implemented automated email processes and managed agile development workflows.",
+      technologies: ["Spring Boot", "Java 11", "Angular 12", "TypeScript", "MySQL", "ElasticSearch", "Hibernate"],
+      category: "Full-Stack",
+      icon: FaRocket,
+      gradient: "from-green-600 to-teal-600",
+      github: "https://github.com/zulqar-abbas",
+      link: "https://marcusfoodco.com",
+      image: "/images/projects/marcus.png",
+      isFlagship: true
+    },
+    {
+      title: "Propforce - Real Estate Platform",
+      description: "Developed a comprehensive real estate management platform for Propforce. Built REST APIs serving 100k+ users, implemented scheduling services with business rules, and achieved 25% reduction in deal cancellations. Dramatically improved server response time by 50% through system optimization.",
+      technologies: ["NodeJS", "ExpressJS", "MongoDB", "Redis", "Angular", "TypeScript", "Sequelize"],
+      category: "Full-Stack",
+      icon: FaRocket,
+      gradient: "from-purple-600 to-pink-600",
+      github: "https://github.com/zulqar-abbas",
+      link: "https://propforce.com",
+      image: "/images/projects/propforce.jpeg",
+      isFlagship: true
+    },
+    {
       title: "Global Search Platform",
       description: "Built a comprehensive search platform using Amazon OpenSearch Service and AWS ECS, handling 13 million records per index with 30% faster search times and 30% productivity boost.",
       technologies: ["TypeScript", "React", "AWS", "NodeJS", "OpenSearch"],
       category: "Full-Stack",
       icon: FaRocket,
       gradient: "from-blue-500 to-cyan-500",
-      link: "#",
-      github: "#"
+      github: "https://github.com/zulqar-abbas"
     },
     {
       title: "Campaign Nurturing System",
@@ -44,8 +79,7 @@ export default function Projects() {
       category: "Marketing",
       icon: FaChartLine,
       gradient: "from-green-500 to-emerald-500",
-      link: "#",
-      github: "#"
+      github: "https://github.com/zulqar-abbas"
     },
     {
       title: "Platform Notification Module",
@@ -54,8 +88,7 @@ export default function Projects() {
       category: "Real-time",
       icon: FaBell,
       gradient: "from-orange-500 to-red-500",
-      link: "#",
-      github: "#"
+      github: "https://github.com/zulqar-abbas"
     },
     {
       title: "ROI Reporting System",
@@ -64,8 +97,7 @@ export default function Projects() {
       category: "Analytics",
       icon: FaFileAlt,
       gradient: "from-yellow-500 to-orange-500",
-      link: "#",
-      github: "#"
+      github: "https://github.com/zulqar-abbas"
     },
     {
       title: "Global UIKit Module",
@@ -74,8 +106,7 @@ export default function Projects() {
       category: "UI/UX",
       icon: FaPalette,
       gradient: "from-indigo-500 to-purple-500",
-      link: "#",
-      github: "#"
+      github: "https://github.com/zulqar-abbas"
     }
   ]
 
@@ -87,8 +118,7 @@ export default function Projects() {
     category: "AI/ML",
     icon: FaBrain,
     gradient: "from-purple-500 to-pink-500",
-    link: "#",
-    github: "#",
+    github: "https://github.com/zulqar-abbas",
     isAI: true
   }))
 
@@ -155,11 +185,24 @@ export default function Projects() {
               const ProjectIcon = project.icon
               
               return (
-                <div key={index} className="card-modern overflow-hidden hover-lift group">
+                <div key={index} className={`card-modern overflow-hidden hover-lift group ${project.isFlagship ? 'ring-2 ring-blue-500 shadow-xl transform hover:scale-105' : ''}`}>
                   {/* Project Header */}
                   <div className={`h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}>
-                    <div className="absolute inset-0 bg-black/10"></div>
-                    <ProjectIcon className="w-16 h-16 text-white relative z-10 group-hover:scale-110 transition-transform duration-300" />
+                    {project.isFlagship && project.image ? (
+                      <>
+                        <img 
+                          src={project.image} 
+                          alt={project.title}
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black/20"></div>
+                      </>
+                    ) : (
+                      <div className="absolute inset-0 bg-black/10"></div>
+                    )}
+                    {!project.isFlagship && (
+                      <ProjectIcon className="w-16 h-16 text-white relative z-10 group-hover:scale-110 transition-transform duration-300" />
+                    )}
                     <div className="absolute top-4 right-4 flex gap-2">
                       <span className="badge-gradient text-xs">
                         {project.category}
@@ -175,7 +218,7 @@ export default function Projects() {
 
                   {/* Project Content */}
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                    <h3 className={`text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200 ${project.isFlagship ? 'text-lg' : ''}`}>
                       {project.title}
                     </h3>
 
@@ -209,20 +252,27 @@ export default function Projects() {
 
                     {/* Project Links */}
                     <div className="flex space-x-3">
-                      <a
-                        href={project.link}
-                        className="flex-1 btn-gradient text-center py-2 px-4 text-sm font-medium inline-flex items-center justify-center"
-                      >
-                        <FaExternalLinkAlt className="w-4 h-4 mr-2" />
-                        View Project
-                      </a>
-                      <a
-                        href={project.github}
-                        className="flex-1 btn-secondary text-center py-2 px-4 text-sm font-medium inline-flex items-center justify-center"
-                      >
-                        <FaGithub className="w-4 h-4 mr-2" />
-                        GitHub
-                      </a>
+                      {project.isFlagship && project.link ? (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full btn-gradient text-center py-2 px-4 text-sm font-medium inline-flex items-center justify-center"
+                        >
+                          <FaExternalLinkAlt className="w-4 h-4 mr-2" />
+                          View Project
+                        </a>
+                      ) : (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full btn-secondary text-center py-2 px-4 text-sm font-medium inline-flex items-center justify-center"
+                        >
+                          <FaGithub className="w-4 h-4 mr-2" />
+                          GitHub
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>

@@ -33,7 +33,7 @@ export default function About() {
     },
     {
       title: 'Frontend Development',
-      skills: ['React', 'NextJS', 'Angular'],
+      skills: ['React', 'NextJS', 'Angular', 'Material UI', 'Shadcn', 'Ant Design'],
       description: 'Modern UI frameworks and libraries',
       icon: FaPalette,
       gradient: 'from-purple-500 to-pink-500'
